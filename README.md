@@ -27,4 +27,4 @@ Windows 8.1 Pro
    CPU: Intel Core i5-2500K 3.30GHz
    RAM: Kingston HyperX 8GB 1600MHz DDR3 CL9
    HDD: Western Digital Caviar 500GB SATA/600 7200RPM 32MB Cache
-'''
+```
