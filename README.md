@@ -168,7 +168,7 @@ $ curl -XPOST 'localhost:9200/crimes/_search?pretty' -d '
 }
 ```
 
-![1](https://github.com/mossowski/NoSQL-egz/blob/master/images/kibanalsoa.png)
+![1](https://github.com/mossowski/NoSQL-egz/blob/master/images/kibanalsoaname.png)
 
 ### Top 5 Most popular location in intervention
 
