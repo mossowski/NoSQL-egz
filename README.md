@@ -9,6 +9,7 @@
 - [Preparing Data](#preparing-data)
     - [Preparing data for ElasticSearch standard](#preparing-data-for-elasticsearch-standard)
     - [Spliting data](#spliting-data)
+    - [Import data to ElasticSearch](#import-data-to-elasticsearch)
     - [Example record](#example-record)
 - [Aggregations](#aggregations)
     - [The most common reasons for intervention](#the-most-common-reasons-for-intervention)
@@ -57,6 +58,16 @@ I used data about crimes in United Kingdom from [data.police.uk](http://data.pol
   real    0m0.890s
   user    0m0.052s
   sys     0m0.786s
+```
+
+### Import data to ElasticSearch
+
+```bash
+   $ time for i in x*; do curl -s -XPOST   localhost:9200/crimes/_bulk --data-binary @$i; done
+
+   real    1m54.331s
+   user    0m2.786s
+   sys     0m4.432s
 ```
 
 ### Example record
