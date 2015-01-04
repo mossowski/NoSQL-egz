@@ -9,6 +9,7 @@
 - [Preparing Data](#preparingdata)
     - [Preparing data for ElasticSearch standard](#preparingdataforelasticsearchstandard)
     - [Spliting data](#splitingdata)
+    - [Example record](#examplerecord)
 
 # System info
 
@@ -53,4 +54,29 @@ I used data about crimes in United Kingdom from [data.police.uk](http://data.pol
   real    0m0.890s
   user    0m0.052s
   sys     0m0.786s
+```
+
+## Example record
+
+```sh
+{
+    "index":
+    {
+        "_type":"crimes"
+    }
+}
+{
+    "Crime ID":"",
+    "Month":"2010-12",
+    "Reported by":"Bedfordshire Police",
+    "Falls within":"Bedfordshire Police",
+    "Longitude":"-0.407558",
+    "Latitude":"51.896342",
+    "Location":"On or near Fair Oak Drive",
+    "LSOA code":"E01015775",
+    "LSOA name":"Luton 012B",
+    "Crime type":"Anti-social behaviour",
+    "Last outcome category":"",
+    "Context":""
+}
 ```
