@@ -62,40 +62,15 @@ I used data about crimes in United Kingdom from [data.police.uk](http://data.pol
 ### Example record
 
 ```bash
-$ curl -XPOST 'localhost:9200/shakespeare/_search?pretty' -d '
+$ curl -XPOST 'localhost:9200/crimes/_search?pretty' -d '
 {
     "query" : { "match_all" : { } },
     "size" : 1 
 }'
+```
 
-{
-  "took" : 1,
-  "timed_out" : false,
-  "_shards" : {
-    "total" : 5,
-    "successful" : 5,
-    "failed" : 0
-  },
-  "hits" : {
-    "total" : 111396,
-    "max_score" : 1.0,
-    "hits" : [ {
-      "_index" : "shakespeare",
-      "_type" : "line",
-      "_id" : "4",
-      "_score" : 1.0, 
-      "_source" : 
-      {
-          "line_id":5,
-          "play_name":"Henry IV",
-          "speech_number":1,
-          "line_number":"1.1.2",
-          "speaker":"KING HENRY IV",
-          "text_entry":"Find we a time for frighted peace to pant,"
-      }
-}
-
-
+Example record
+```bash
 {
     "index":
     {
