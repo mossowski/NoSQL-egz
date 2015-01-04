@@ -2,6 +2,8 @@
 
 ----
 
+# ElasticSearch Aggregations
+
 # Table of content
 - [System info](#system-info)
     - [Software](#software)
