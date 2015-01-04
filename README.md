@@ -113,7 +113,7 @@ $ curl -XPOST 'localhost:9200/crimes/_search?pretty' -d '
 
 # Aggregations
 
-## To create diagrams i used ElasticSearch Kibana version 4.0.0 beta3.
+#### To create diagrams i used ElasticSearch Kibana version 4.0.0 beta3.
 
 ### The most common reasons for intervention
 
