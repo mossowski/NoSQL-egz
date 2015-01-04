@@ -11,6 +11,7 @@
     - [Spliting data](#spliting-data)
     - [Import data to ElasticSearch](#import-data-to-elasticsearch)
     - [Example record](#example-record)
+    - [Example records from Kibana](#example-records-from-kibana)
 - [Aggregations](#aggregations)
     - [The most common reasons for intervention](#the-most-common-reasons-for-intervention)
     - [Top 5 LSOA codes used in intervention](#top-5-lsoa-codes-used-in-intervention)
@@ -104,6 +105,10 @@ $ curl -XPOST 'localhost:9200/crimes/_search?pretty' -d '
     "Context":""
 }
 ```
+
+### Example records from Kibana
+
+![1](https://github.com/mossowski/NoSQL-egz/blob/master/images/kibanarecord.png)
 
 # Aggregations
 
