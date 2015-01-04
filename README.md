@@ -10,6 +10,9 @@
     - [Preparing data for ElasticSearch standard](#preparing-data-for-elasticsearch-standard)
     - [Spliting data](#spliting-data)
     - [Example record](#example-record)
+- [Aggregations](#aggregations)
+    - [The most common reasons for intervention](#the-most-common-reasons-for-intervention)
+    - [Top 5 LSOA codes used in intervention](#top-5-lsoa-codes-used-in-intervention)
 
 # System info
 
@@ -114,3 +117,37 @@ $ curl -XPOST 'localhost:9200/shakespeare/_search?pretty' -d '
     "Context":""
 }
 ```
+
+# Aggregations
+
+
+### The most common reasons for intervention
+
+```bash
+{
+   "query" : { "match_all" : { } },
+   "facets" : {
+       "crime_type" : {
+           "terms" : {
+               "field" : "crime_type"
+           }
+       }
+   }
+}
+```
+
+### Top 5 LSOA codes used in intervention
+
+{
+   "query" : {
+       "query_string" : {"query" : "*"}
+   },
+   "facets" : {
+       "lsoa_code" : {
+           "terms" : {
+               "field" : "lsoa_code",
+               "size" : 10
+           }
+       }
+   }
+}
