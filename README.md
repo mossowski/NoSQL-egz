@@ -138,6 +138,7 @@ $ curl -XPOST 'localhost:9200/shakespeare/_search?pretty' -d '
 
 ### Top 5 LSOA codes used in intervention
 
+```bash
 {
    "query" : {
        "query_string" : {"query" : "*"}
@@ -146,8 +147,9 @@ $ curl -XPOST 'localhost:9200/shakespeare/_search?pretty' -d '
        "lsoa_code" : {
            "terms" : {
                "field" : "lsoa_code",
-               "size" : 10
+               "size" : 5
            }
        }
    }
 }
+```
