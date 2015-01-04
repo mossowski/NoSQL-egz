@@ -14,6 +14,7 @@
 - [Aggregations](#aggregations)
     - [The most common reasons for intervention](#the-most-common-reasons-for-intervention)
     - [Top 5 LSOA codes used in intervention](#top-5-lsoa-codes-used-in-intervention)
+    - [Top 5 Most popular location in intervention](#top-5-most-popular-location-in-intervention)
 
 # System info
 
@@ -132,6 +133,24 @@ $ curl -XPOST 'localhost:9200/crimes/_search?pretty' -d '
        "lsoa_code" : {
            "terms" : {
                "field" : "lsoa_code",
+               "size" : 5
+           }
+       }
+   }
+}
+```
+
+### Top 5 Most popular location in intervention
+
+```bash
+{
+   "query" : {
+       "query_string" : {"query" : "*"}
+   },
+   "facets" : {
+       "location" : {
+           "terms" : {
+               "field" : "location",
                "size" : 5
            }
        }
