@@ -13,7 +13,7 @@
 
 # System info
 
-## Software
+### Software
 
 ElasticSearch
 ```bash
@@ -24,7 +24,7 @@ Operating system
 Windows 8.1 Pro
 ```
 
-## Hardware
+### Hardware
 
 ```bash
    CPU: Intel Core i5-2500K 3.30GHz
@@ -36,9 +36,9 @@ Windows 8.1 Pro
 
 I used data about crimes in United Kingdom from [data.police.uk](http://data.police.uk/data/).
 
-## Preparing data for ElasticSearch standard
+### Preparing data for ElasticSearch standard
 
-```sh
+```bash
   $ time jq --compact-output '{ "index" : { "_type" : "crimes" } }, .' crimes.json > final.json
 
   real    0m53.300s
@@ -46,9 +46,9 @@ I used data about crimes in United Kingdom from [data.police.uk](http://data.pol
   sys     0m0.017s
 ```
 
-## Spliting data 
+### Spliting data 
 
-```sh
+```bash
   $ time split -l 100000 final.json
 
   real    0m0.890s
@@ -56,9 +56,9 @@ I used data about crimes in United Kingdom from [data.police.uk](http://data.pol
   sys     0m0.786s
 ```
 
-## Example record
+### Example record
 
-```sh
+```bash
 {
     "index":
     {
