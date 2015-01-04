@@ -3,13 +3,13 @@
 ----
 
 # Table of content
-- [System info](#systeminfo)
+- [System info](#system-info)
     - [Software](#software)
     - [Hardware](#hardware)
-- [Preparing Data](#preparingdata)
-    - [Preparing data for ElasticSearch standard](#preparingdataforelasticsearchstandard)
-    - [Spliting data](#splitingdata)
-    - [Example record](#examplerecord)
+- [Preparing Data](#preparing-data)
+    - [Preparing data for ElasticSearch standard](#preparing-data-for-elasticsearch-standard)
+    - [Spliting data](#spliting-data)
+    - [Example record](#example-record)
 
 # System info
 
