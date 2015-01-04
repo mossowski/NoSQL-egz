@@ -122,6 +122,7 @@ $ curl -XPOST 'localhost:9200/crimes/_search?pretty' -d '
    }
 }
 ```
+![1](https://github.com/mossowski/NoSQL-egz/blob/master/images/kibanacrime.png)
 
 ### Top 5 LSOA codes used in intervention
 
@@ -141,6 +142,8 @@ $ curl -XPOST 'localhost:9200/crimes/_search?pretty' -d '
 }
 ```
 
+![1](https://github.com/mossowski/NoSQL-egz/blob/master/images/kibanalsoa.png)
+
 ### Top 5 Most popular location in intervention
 
 ```bash
@@ -158,3 +161,5 @@ $ curl -XPOST 'localhost:9200/crimes/_search?pretty' -d '
    }
 }
 ```
+
+![1](https://github.com/mossowski/NoSQL-egz/blob/master/images/kibanalocation.png)
