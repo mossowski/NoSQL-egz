@@ -11,7 +11,7 @@
 - [Preparing Data](#preparing-data)
     - [Preparing data for ElasticSearch standard](#preparing-data-for-elasticsearch-standard)
     - [Spliting data](#spliting-data)
-    - [Import data to ElasticSearch](#import-data-to-elasticsearch)
+    - [Importing data to ElasticSearch](#importing-data-to-elasticsearch)
     - [Example record](#example-record)
     - [Example records from Kibana](#example-records-from-kibana)
 - [Aggregations](#aggregations)
@@ -66,7 +66,7 @@ I used data about crimes in United Kingdom from [data.police.uk](http://data.pol
   sys     0m0.786s
 ```
 
-### Import data to ElasticSearch
+### Importing data to ElasticSearch
 
 ```bash
    $ time for i in x*; do curl -s -XPOST   localhost:9200/crimes/_bulk --data-binary @$i; done
