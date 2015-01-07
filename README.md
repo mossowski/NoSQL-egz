@@ -25,7 +25,7 @@
 
 ## Software
 
-### ElasticSearch
+#### ElasticSearch
 ```bash
    ElasticSearch version 1.4.2 
    Kibana version 4.0.0 beta3
@@ -35,7 +35,7 @@
    Windows 8.1 Pro
 ```
 
-### Hardware
+## Hardware
 
 ```bash
    CPU: Intel Core i5-2500K 3.30GHz
@@ -47,7 +47,7 @@
 
 #### I used data about crimes in United Kingdom from [data.police.uk](http://data.police.uk/data/).
 
-### Preparing data for ElasticSearch standard
+## Preparing data for ElasticSearch standard
 
 ```bash
   $ time jq --compact-output '{ "index" : { "_type" : "crimes" } }, .' crimes.json > final.json
@@ -57,7 +57,7 @@
   sys     0m0.017s
 ```
 
-### Spliting data 
+## Spliting data 
 
 ```bash
   $ time split -l 100000 final.json
@@ -67,7 +67,7 @@
   sys     0m0.786s
 ```
 
-### Importing data to ElasticSearch
+## Importing data to ElasticSearch
 
 ```bash
    $ time for i in x*; do curl -s -XPOST   localhost:9200/crimes/_bulk --data-binary @$i; done
@@ -77,7 +77,7 @@
    sys     0m4.432s
 ```
 
-### Checking number of records
+## Checking number of records
 
 ```bash
    $ curl -XGET 'http://localhost:9200/crimes/crimes/_count'
@@ -92,7 +92,7 @@
    }
 ```
 
-### Example record
+## Example record
 
 ```bash
 $ curl -XPOST 'localhost:9200/crimes/_search?pretty' -d '
@@ -125,7 +125,7 @@ $ curl -XPOST 'localhost:9200/crimes/_search?pretty' -d '
 }
 ```
 
-### Example records from Kibana
+## Example records from Kibana
 
 ![1](https://github.com/mossowski/NoSQL-egz/blob/master/images/kibanarecord.png)
 
@@ -133,7 +133,7 @@ $ curl -XPOST 'localhost:9200/crimes/_search?pretty' -d '
 
 #### To create diagrams i used ElasticSearch Kibana version 4.0.0 beta3.
 
-### The most common reasons for intervention
+## The most common reasons for intervention
 
 ```bash
 {
@@ -149,7 +149,7 @@ $ curl -XPOST 'localhost:9200/crimes/_search?pretty' -d '
 ```
 ![1](https://github.com/mossowski/NoSQL-egz/blob/master/images/kibanacrime.png)
 
-### Top 5 LSOA codes used in intervention
+## Top 5 LSOA codes used in intervention
 
 ```bash
 {
@@ -167,7 +167,7 @@ $ curl -XPOST 'localhost:9200/crimes/_search?pretty' -d '
 }
 ```
 
-#### Wynik
+### Wynik
 
 ```bash
    facets: {
@@ -205,7 +205,7 @@ $ curl -XPOST 'localhost:9200/crimes/_search?pretty' -d '
 
 
 
-### Top 25 LSOA names in intervention
+## Top 25 LSOA names in intervention
 
 ```bash
 {
@@ -225,7 +225,7 @@ $ curl -XPOST 'localhost:9200/crimes/_search?pretty' -d '
 
 ![1](https://github.com/mossowski/NoSQL-egz/blob/master/images/kibanalsoaa.png)
 
-### Top 5 Most popular location in intervention
+## Top 5 Most popular location in intervention
 
 ```bash
 {
@@ -243,7 +243,7 @@ $ curl -XPOST 'localhost:9200/crimes/_search?pretty' -d '
 }
 ```
 
-#### Wynik
+### Wynik
 
 ```bash
    facets: {
