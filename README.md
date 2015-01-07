@@ -169,7 +169,7 @@ $ curl -XPOST 'localhost:9200/crimes/_search?pretty' -d '
 
 #### Wynik
 
-```bash
+```json
    facets: {
        lsoa_code: {
            _type: terms,
@@ -204,6 +204,8 @@ $ curl -XPOST 'localhost:9200/crimes/_search?pretty' -d '
 ```
 
 ![1](https://github.com/mossowski/NoSQL-egz/blob/master/images/kibanalsoa.png)
+
+
 
 ### Top 25 LSOA names in intervention
 
@@ -245,7 +247,7 @@ $ curl -XPOST 'localhost:9200/crimes/_search?pretty' -d '
 
 #### Wynik
 
-```bash
+```json
    facets: {
        location: {
            _type: terms,
