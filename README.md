@@ -1,4 +1,4 @@
-### *Marcin Ossowski*
+## *Marcin Ossowski*
 
 ----
 
@@ -23,9 +23,9 @@
     
 # System info
 
-### Software
+## Software
 
-#### ElasticSearch
+### ElasticSearch
 ```bash
    ElasticSearch version 1.4.2 
    Kibana version 4.0.0 beta3
