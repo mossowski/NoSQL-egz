@@ -173,9 +173,7 @@ $ curl -XPOST 'localhost:9200/crimes/_search?pretty' -d '
    facets: {
        lsoa_code: {
            _type: terms,
-           missing: 16599,
            total: 1215671,
-           other: 854539,
            terms: [ 
                {
                    term:  E01014370,
@@ -251,9 +249,7 @@ $ curl -XPOST 'localhost:9200/crimes/_search?pretty' -d '
    facets: {
        location: {
            _type: terms,
-           missing: 16599,
            total: 1215671,
-           other: 854539,
            terms: [ 
                {
                    term:  On or near Manvers Street,
