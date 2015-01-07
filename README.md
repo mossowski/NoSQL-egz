@@ -12,6 +12,7 @@
     - [Preparing data for ElasticSearch standard](#preparing-data-for-elasticsearch-standard)
     - [Spliting data](#spliting-data)
     - [Importing data to ElasticSearch](#importing-data-to-elasticsearch)
+    - [Checking number of records](#checking-number-of-records)
     - [Example record](#example-record)
     - [Example records from Kibana](#example-records-from-kibana)
 - [Aggregations](#aggregations)
@@ -74,6 +75,21 @@ I used data about crimes in United Kingdom from [data.police.uk](http://data.pol
    real    1m54.331s
    user    0m2.786s
    sys     0m4.432s
+```
+
+### Checking number of records
+
+```bash
+   $ curl -XGET 'http://localhost:9200/crimes/crimes/_count'
+
+   {
+       "count":1215671,
+       "_shards" : {
+                       "total":5,
+                       "successful":5,
+                       "failed":0
+                   }
+   }
 ```
 
 ### Example record
