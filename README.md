@@ -102,7 +102,7 @@ $ curl -XPOST 'localhost:9200/crimes/_search?pretty' -d '
 }'
 ```
 
-```bash
+```json
 {
     "index":
     {
@@ -258,7 +258,7 @@ $ curl -XPOST 'localhost:9200/crimes/_search?pretty' -d '
                    count: 21882
                },
                {
-                   term:  On or near St. James'S Parade,
+                   term:  On or near St. JamesS Parade,
                    count: 17019
                },
                {
