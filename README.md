@@ -169,7 +169,7 @@ $ curl -XPOST 'localhost:9200/crimes/_search?pretty' -d '
 
 #### Wynik
 
-```json
+```bash
    facets: {
        lsoa_code: {
            _type: terms,
@@ -247,7 +247,7 @@ $ curl -XPOST 'localhost:9200/crimes/_search?pretty' -d '
 
 #### Wynik
 
-```json
+```bash
    facets: {
        location: {
            _type: terms,
