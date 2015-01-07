@@ -25,14 +25,14 @@
 
 ### Software
 
-ElasticSearch
+#### ElasticSearch
 ```bash
-ElasticSearch version 1.4.2 
-Kibana version 4.0.0 beta3
+   ElasticSearch version 1.4.2 
+   Kibana version 4.0.0 beta3
 ```
-Operating system
+#### Operating system
 ```bash
-Windows 8.1 Pro
+   Windows 8.1 Pro
 ```
 
 ### Hardware
@@ -45,7 +45,7 @@ Windows 8.1 Pro
 
 # Preparing data
 
-I used data about crimes in United Kingdom from [data.police.uk](http://data.police.uk/data/).
+#### I used data about crimes in United Kingdom from [data.police.uk](http://data.police.uk/data/).
 
 ### Preparing data for ElasticSearch standard
 
@@ -85,10 +85,10 @@ I used data about crimes in United Kingdom from [data.police.uk](http://data.pol
    {
        "count":1215671,
        "_shards" : {
-                       "total":5,
-                       "successful":5,
-                       "failed":0
-                   }
+            "total":5,
+            "successful":5,
+            "failed":0
+       }
    }
 ```
 
@@ -176,31 +176,30 @@ $ curl -XPOST 'localhost:9200/crimes/_search?pretty' -d '
            missing: 16599,
            total: 1215671,
            other: 854539,
-           terms: 
-           [ 
-           {
-               term:  E01014370,
-               count: 77803
-           },
-           {
-               term:  E01014371,
-               count: 29176
-           },
-           {
-               term:  E01014407,
-               count: 24313
-           },
-           {
-               term:  E01014372,
-               count: 24313
-           },
-           {
-               term:  E01014689,
-               count: 19451
-           }
-    ]
-  }
- }
+           terms: [ 
+               {
+                   term:  E01014370,
+                   count: 77803
+               },
+               {
+                   term:  E01014371,
+                   count: 29176
+               },
+               {
+                   term:  E01014407,
+                   count: 24313
+               },
+               {
+                   term:  E01014372,
+                   count: 24313
+               },
+               {
+                   term:  E01014689,
+                   count: 19451
+               }
+           ]
+       }
+   }
 }
 ```
 
@@ -253,31 +252,30 @@ $ curl -XPOST 'localhost:9200/crimes/_search?pretty' -d '
            missing: 16599,
            total: 1215671,
            other: 854539,
-           terms: 
-           [ 
-           {
-               term:  On or near Manvers Street,
-               count: 21882
-           },
-           {
-               term:  On or near St. James'S Parade,
-               count: 17019
-           },
-           {
-               term:  On or near High Street,
-               count: 17019
-           },
-           {
-               term:  On or near George Street,
-               count: 12157
-           },
-           {
-               term:  On or near Broad Street,
-               count: 12157
-           }
-    ]
-  }
- }
+           terms: [ 
+               {
+                   term:  On or near Manvers Street,
+                   count: 21882
+               },
+               {
+                   term:  On or near St. James'S Parade,
+                   count: 17019
+               },
+               {
+                   term:  On or near High Street,
+                   count: 17019
+               },
+               {
+                   term:  On or near George Street,
+                   count: 12157
+               },
+               {
+                   term:  On or near Broad Street,
+                   count: 12157
+               }
+           ]
+       }
+   }
 }
 ```
 
