@@ -167,6 +167,43 @@ $ curl -XPOST 'localhost:9200/crimes/_search?pretty' -d '
 }
 ```
 
+#### Wynik
+
+```bash
+   facets: {
+       lsoa_code: {
+           _type: terms,
+           missing: 16599,
+           total: 1215671,
+           other: 854539,
+           terms: 
+           [ 
+           {
+               term:  E01014370,
+               count: 77803
+           },
+           {
+               term:  E01014371,
+               count: 29176
+           },
+           {
+               term:  E01014407,
+               count: 24313
+           },
+           {
+               term:  E01014372,
+               count: 24313
+           },
+           {
+               term:  E01014689,
+               count: 19451
+           }
+    ]
+  }
+ }
+}
+```
+
 ![1](https://github.com/mossowski/NoSQL-egz/blob/master/images/kibanalsoa.png)
 
 ### Top 25 LSOA names in intervention
@@ -204,6 +241,43 @@ $ curl -XPOST 'localhost:9200/crimes/_search?pretty' -d '
            }
        }
    }
+}
+```
+
+#### Wynik
+
+```bash
+   facets: {
+       location: {
+           _type: terms,
+           missing: 16599,
+           total: 1215671,
+           other: 854539,
+           terms: 
+           [ 
+           {
+               term:  On or near Manvers Street,
+               count: 21882
+           },
+           {
+               term:  On or near St. James'S Parade,
+               count: 17019
+           },
+           {
+               term:  On or near High Street,
+               count: 17019
+           },
+           {
+               term:  On or near George Street,
+               count: 12157
+           },
+           {
+               term:  On or near Broad Street,
+               count: 12157
+           }
+    ]
+  }
+ }
 }
 ```
 
